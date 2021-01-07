@@ -4,10 +4,9 @@ const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 
 var engine, world;
-var boxColor;
 
-var colours = [];
-var r = 0; g = 0; b =0;
+
+
 
 function setup() {
   createCanvas(1200,600);
@@ -15,15 +14,11 @@ function setup() {
   world = engine.world;
 
   
-  r = Math.round(random(0,255));  
-  g = Math.round(random(0,255));  
-  b = Math.round(random(0,255)); 
-  
-  stand1 = new Ground(880,300, 250,25);
+  stand1 = new Ground(880,350, 250,25);
   ground = new Ground(600,590, width,25);
   
   
-  //box1 = new Box(800,275,40,40,color(r,g,b));
+ 
   
   box1 = new Box(800,275,40,40,getRandomColor());
   box2 = new Box(840,275,40,40,getRandomColor());
@@ -44,8 +39,10 @@ function setup() {
   box14= new Box(900,65,40,40, getRandomColor());
   box15 = new Box(880, 25,40,40, getRandomColor());
 
-  polygon = new Polygon(50,200);  
-  slingshot = new SlingShot(polygon.body, {x:180,y:250});
+  polygon = new Polygon(280,250);  
+  slingshot = new SlingShot(polygon.body, {x:280,y:250});
+
+ 
 }
 
 function draw() {

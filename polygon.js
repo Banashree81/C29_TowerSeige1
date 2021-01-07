@@ -1,9 +1,9 @@
 class Polygon {
     constructor(x, y) {
       var options = {
-          'restitution':0.5,
+          'restitution':0.8,
           'friction':0.3,
-          'density':1.5
+          'density':1.0
       }
       this.body = Bodies.polygon(x, y,5,20, options);     
       this.image= loadImage("polygon.png");

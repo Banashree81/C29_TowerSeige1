@@ -1,7 +1,7 @@
 class Box {
     constructor(x, y, width, height, colour) {
       var options = {
-          'restitution':0.7,
+          'restitution':0.8,
           'friction':1.0,
           'density':0.5
       }
@@ -12,7 +12,7 @@ class Box {
       World.add(world, this.body);
     }
     display(){
-      var pos =this.body.position;
+      var pos = this.body.position;
       var angle = this.body.angle;
       push();
       translate(pos.x, pos.y);
